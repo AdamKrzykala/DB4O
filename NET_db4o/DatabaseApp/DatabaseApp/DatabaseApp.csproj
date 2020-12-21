@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Db4objects.Db4o">
+      <HintPath>..\..\..\db4o\db4o-8.0\bin\net-4.0\Db4objects.Db4o.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

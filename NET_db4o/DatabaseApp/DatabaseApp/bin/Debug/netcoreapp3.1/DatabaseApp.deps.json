@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "DatabaseApp/1.0.0": {
+        "dependencies": {
+          "Db4objects.Db4o": "8.0.276.16149"
+        },
+        "runtime": {
+          "DatabaseApp.dll": {}
+        }
+      },
+      "Db4objects.Db4o/8.0.276.16149": {
+        "runtime": {
+          "Db4objects.Db4o.dll": {
+            "assemblyVersion": "8.0.276.16149",
+            "fileVersion": "8.0.276.16149"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DatabaseApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Db4objects.Db4o/8.0.276.16149": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
