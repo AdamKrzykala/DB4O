@@ -8,11 +8,11 @@ namespace DatabaseApp2.dbObjects
     class Draw
     {
         public string drawName;
-        Collection<Point> points;
+        public Collection<Point> points;
 
-        public Draw(string name)
+        public Draw(string name,  Collection<Point> tempCollection)
         {
-            this.points = new Collection<Point>();
+            this.points = tempCollection;
             this.drawName = name;
         }
 

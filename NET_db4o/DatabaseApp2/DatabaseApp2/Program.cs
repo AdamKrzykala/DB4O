@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace DatabaseApp2
 {
@@ -8,7 +10,7 @@ namespace DatabaseApp2
         {
             //Task 1
             AccessDB4O db = new AccessDB4O();
-            dbObjects.Draw rys1 = new dbObjects.Draw("rys1");
+            dbObjects.Draw rys1 = new dbObjects.Draw("rys1", new Collection<dbObjects.Point>());
             rys1.addPoint(0, 1);
             rys1.addPoint(3, 4);
             if(db.InsertDraw<dbObjects.Draw>(rys1)) 
@@ -17,9 +19,9 @@ namespace DatabaseApp2
 
             //Task 2 - QBE
             db.dbOpen();
-            dbObjects.Draw rysTemplate = new dbObjects.Draw(null);
+            dbObjects.Draw rysTemplate = new dbObjects.Draw(null, new Collection<dbObjects.Point>());
             db.getAllObjects<dbObjects.Draw>(rysTemplate);
-            dbObjects.Draw rys2 = new dbObjects.Draw("rys2");
+            dbObjects.Draw rys2 = new dbObjects.Draw("rys2", new Collection<dbObjects.Point>());
             rys2.addPoint(0, 0);
             if (db.InsertDraw<dbObjects.Draw>(rys2))
                 Console.WriteLine("Rys2 added");
@@ -33,6 +35,13 @@ namespace DatabaseApp2
 
             db.dbOpen();
             Console.WriteLine("Points shifted");
+            db.getAllDrawsNativeQuery();
+            db.dbClose();
+
+            db.dbOpen();
+            //Deleting point 
+            db.deletePoint("rys2", 0, 0);
+            db.deletePoint("rys1", 2, 2);
             db.getAllDrawsNativeQuery();
             db.dbClose();
         }

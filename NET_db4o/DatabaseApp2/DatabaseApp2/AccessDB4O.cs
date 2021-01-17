@@ -4,6 +4,8 @@ using System.Text;
 using Db4objects.Db4o;
 using Db4objects.Db4o.Config;
 using Db4objects.Db4o.Query;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace DatabaseApp2
 {
@@ -69,8 +71,10 @@ namespace DatabaseApp2
 
         public void dbOpen()
         {
+            IEmbeddedConfiguration config = Db4oEmbedded.NewConfiguration();
+            config.Common.ObjectClass(typeof(dbObjects.Draw)).CascadeOnUpdate(true);
             Console.WriteLine("Opening database");
-            db = Db4oEmbedded.OpenFile(_path);
+            db = Db4oEmbedded.OpenFile(config, _path);
         }
 
         public void dbClose()
@@ -89,15 +93,35 @@ namespace DatabaseApp2
 
         public void shiftingPoints(string name, float x, float y)
         {
-            dbObjects.Draw obj = new dbObjects.Draw(name);
+            dbObjects.Draw obj = new dbObjects.Draw(name, new Collection<dbObjects.Point>());
             try
             {
                 IObjectSet result = db.QueryByExample(obj);
                 dbObjects.Draw found = (dbObjects.Draw)result.Next();
                 
                 found.MovePoints(x, y);
-                Console.WriteLine(found.ToString());
                 db.Store(found);
+            }
+            finally { }
+        }
+
+        public void deletePoint(string name, float x, float y)
+        {
+            dbObjects.Draw obj = new dbObjects.Draw(name, null);
+            try
+            {
+                IObjectSet result = db.QueryByExample(obj);
+                dbObjects.Draw found = (dbObjects.Draw)result.Next();
+
+                foreach (dbObjects.Point point in found.points)
+                {
+                    if (point.x == x && point.y == y)
+                    {
+                        found.points.Remove(point);
+                        break;
+                    }
+                }
+                this.db.Store(found);
             }
             finally { }
         }
