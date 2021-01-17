@@ -1,0 +1,15 @@
+C:\Users\adamk\Desktop\db4o-objective-database\NET_db4o\DatabaseApp2\DatabaseApp2\obj\Debug\netcoreapp3.1\DatabaseApp2.csprojAssemblyReference.cache
+C:\Users\adamk\Desktop\db4o-objective-database\NET_db4o\DatabaseApp2\DatabaseApp2\obj\Debug\netcoreapp3.1\DatabaseApp2.AssemblyInfoInputs.cache
+C:\Users\adamk\Desktop\db4o-objective-database\NET_db4o\DatabaseApp2\DatabaseApp2\obj\Debug\netcoreapp3.1\DatabaseApp2.AssemblyInfo.cs
+C:\Users\adamk\Desktop\db4o-objective-database\NET_db4o\DatabaseApp2\DatabaseApp2\obj\Debug\netcoreapp3.1\DatabaseApp2.csproj.CoreCompileInputs.cache
+C:\Users\adamk\Desktop\db4o-objective-database\NET_db4o\DatabaseApp2\DatabaseApp2\bin\Debug\netcoreapp3.1\DatabaseApp2.exe
+C:\Users\adamk\Desktop\db4o-objective-database\NET_db4o\DatabaseApp2\DatabaseApp2\bin\Debug\netcoreapp3.1\DatabaseApp2.deps.json
+C:\Users\adamk\Desktop\db4o-objective-database\NET_db4o\DatabaseApp2\DatabaseApp2\bin\Debug\netcoreapp3.1\DatabaseApp2.runtimeconfig.json
+C:\Users\adamk\Desktop\db4o-objective-database\NET_db4o\DatabaseApp2\DatabaseApp2\bin\Debug\netcoreapp3.1\DatabaseApp2.runtimeconfig.dev.json
+C:\Users\adamk\Desktop\db4o-objective-database\NET_db4o\DatabaseApp2\DatabaseApp2\bin\Debug\netcoreapp3.1\DatabaseApp2.dll
+C:\Users\adamk\Desktop\db4o-objective-database\NET_db4o\DatabaseApp2\DatabaseApp2\bin\Debug\netcoreapp3.1\DatabaseApp2.pdb
+C:\Users\adamk\Desktop\db4o-objective-database\NET_db4o\DatabaseApp2\DatabaseApp2\bin\Debug\netcoreapp3.1\Db4objects.Db4o.dll
+C:\Users\adamk\Desktop\db4o-objective-database\NET_db4o\DatabaseApp2\DatabaseApp2\obj\Debug\netcoreapp3.1\DatabaseApp2.csproj.CopyComplete
+C:\Users\adamk\Desktop\db4o-objective-database\NET_db4o\DatabaseApp2\DatabaseApp2\obj\Debug\netcoreapp3.1\DatabaseApp2.dll
+C:\Users\adamk\Desktop\db4o-objective-database\NET_db4o\DatabaseApp2\DatabaseApp2\obj\Debug\netcoreapp3.1\DatabaseApp2.pdb
+C:\Users\adamk\Desktop\db4o-objective-database\NET_db4o\DatabaseApp2\DatabaseApp2\obj\Debug\netcoreapp3.1\DatabaseApp2.genruntimeconfig.cache

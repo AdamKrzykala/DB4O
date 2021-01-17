@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adamk\\Desktop\\db4o-objective-database\\NET_db4o\\DatabaseApp\\DatabaseApp\\DatabaseApp.csproj",
-      "projectName": "DatabaseApp",
-      "projectPath": "C:\\Users\\adamk\\Desktop\\db4o-objective-database\\NET_db4o\\DatabaseApp\\DatabaseApp\\DatabaseApp.csproj",
+      "projectUniqueName": "C:\\Users\\adamk\\Desktop\\db4o-objective-database\\NET_db4o\\DatabaseApp2\\DatabaseApp2\\DatabaseApp2.csproj",
+      "projectName": "DatabaseApp2",
+      "projectPath": "C:\\Users\\adamk\\Desktop\\db4o-objective-database\\NET_db4o\\DatabaseApp2\\DatabaseApp2\\DatabaseApp2.csproj",
       "packagesPath": "C:\\Users\\adamk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adamk\\Desktop\\db4o-objective-database\\NET_db4o\\DatabaseApp\\DatabaseApp\\obj\\",
+      "outputPath": "C:\\Users\\adamk\\Desktop\\db4o-objective-database\\NET_db4o\\DatabaseApp2\\DatabaseApp2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

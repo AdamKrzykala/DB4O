@@ -5,7 +5,7 @@ using Db4objects.Db4o;
 using Db4objects.Db4o.Config;
 using Db4objects.Db4o.Query;
 
-namespace DatabaseApp
+namespace DatabaseApp2
 {
     class AccessDB4O
     {
@@ -39,7 +39,7 @@ namespace DatabaseApp
             }
         }
 
-        public bool Insert<T>(T obj)
+        public bool InsertDraw<T>(T obj)
         {
             try
             {
@@ -49,23 +49,22 @@ namespace DatabaseApp
             return true;
         }
 
-        public void UpdatePoints<T>(T obj, int points)
-        {
-            try
-            {
-                IObjectSet result = db.QueryByExample(obj);
-                dbObjects.Zawodnik found = (dbObjects.Zawodnik)result.Next();
-                found.setPoints(points);
-                db.Store(found);
-            }
-            finally { }
-        }
-
-
         public void getAllObjects<T>(T obj)
         {
             IObjectSet result = db.QueryByExample(obj);
             ListResult(result);
+        }
+
+        public void getAllDrawsNativeQuery()
+        {
+            IList<dbObjects.Draw> draws = db.Query<dbObjects.Draw>(delegate (dbObjects.Draw draw) {
+                return draw.drawName != null;
+            });
+
+            foreach (object item in draws)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         public void dbOpen()
@@ -82,41 +81,25 @@ namespace DatabaseApp
 
         public static void ListResult(IObjectSet result)
         {
-            Console.WriteLine(result.Count);
             foreach (object item in result)
             {
                 Console.WriteLine(item);
             }
         }
 
-        public void showConstraints()
+        public void shiftingPoints(string name, float x, float y)
         {
-            IList<dbObjects.Zawodnik> zawodnicy = db.Query<dbObjects.Zawodnik>(delegate (dbObjects.Zawodnik zawodnik) {
-                return zawodnik._points > 100 || zawodnik._birthYear > 1984;
-            });
-
-            foreach (object item in zawodnicy)
+            dbObjects.Draw obj = new dbObjects.Draw(name);
+            try
             {
-                Console.WriteLine(item);
+                IObjectSet result = db.QueryByExample(obj);
+                dbObjects.Draw found = (dbObjects.Draw)result.Next();
+                
+                found.MovePoints(x, y);
+                Console.WriteLine(found.ToString());
+                db.Store(found);
             }
+            finally { }
         }
-
-        public void RetrieveComplexSODA()
-        {
-            IQuery query = db.Query();
-            query.Constrain(typeof(dbObjects.Zawodnik));
-            IObjectSet result = query.Execute();
-            ListResult(result);
-        }
-
-        public void showConstraintsSODA()
-        {
-            IQuery query = db.Query();
-            query.Constrain(typeof(dbObjects.Zawodnik));
-            query.Descend("_points").Constrain(99).Greater();
-            IObjectSet result = query.Execute();
-            ListResult(result);
-        }
-
     }
 }

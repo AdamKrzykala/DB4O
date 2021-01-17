@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hwzvA3FWaocEM2S7FrwiPY2d9NPpNyrSkoAi7qPSDZtGn55Hn+ALMUlo5EWENoKfM43LYcV584+4fMhGip1ogw==",
+  "dgSpecHash": "S9UxA5hj9DyeRb04D0U+XfzsVVzC0ui7Ad1J8AH9PmYFl/mHuujTIHV3KWYL/c4dKR95bDsMscgsBJqpQj8oGw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adamk\\Desktop\\db4o\\NET_db4o\\DatabaseApp\\DatabaseApp\\DatabaseApp.csproj",
+  "projectFilePath": "C:\\Users\\adamk\\Desktop\\db4o-objective-database\\NET_db4o\\DatabaseApp\\DatabaseApp\\DatabaseApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

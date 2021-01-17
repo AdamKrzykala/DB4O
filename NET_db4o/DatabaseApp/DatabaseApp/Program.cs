@@ -55,6 +55,12 @@ namespace DatabaseApp
             db.RetrieveComplexSODA();
             Console.WriteLine("");
             db.dbClose();
+
+            db.dbOpen();
+            Console.WriteLine("SODA Constraints");
+            db.showConstraintsSODA();
+            Console.WriteLine("");
+            db.dbClose();
         }
     }
 }
